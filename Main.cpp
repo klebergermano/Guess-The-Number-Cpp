@@ -30,7 +30,7 @@ void play_game() {
 	int rand_num = rand_number();
 	int guess; 
 	int num_guesses = 0; 
-	const int limit_guesses = 1;
+	const int limit_guesses = 5;
 	int arr_guesses[limit_guesses] = {};
 	int arr_guesses_size = sizeof(arr_guesses) / sizeof(arr_guesses[0]);
 	   
@@ -96,7 +96,7 @@ cout << R"(
 		string you_lose =  R"(
 |||||||||||||||||||||||||||||||||||||||||||||||||||||
 -----------------------------------------------------
---------------------YOU LOSE !!!---------------------
+------------------- YOU LOSE!!! ---------------------
 -----------------------------------------------------
               The right number was answer       
 -----------------------------------------------------
@@ -104,7 +104,7 @@ cout << R"(
 			)";
 
 
-		you_lose.replace(you_lose.find("answer") , 6, std::to_string(guess));
+		you_lose.replace(you_lose.find("answer") , 6, std::to_string(rand_num));
 		cout << you_lose; 
 
 		// Show the right number
