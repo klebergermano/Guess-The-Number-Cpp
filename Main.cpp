@@ -1,9 +1,11 @@
 #include <iostream>
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
+#include <string>
 using std::cout; 
 using std::cin;
 using std::endl;
+using std::string; 
 
 int rand_number() {
 	int rand_num; 
@@ -12,11 +14,23 @@ int rand_number() {
 	return rand_num; 
 }
 
+void show_guesses(int arr_guesses[], int size) {
+	cout << "### ";
+	for (int i = 0; i < size; i++) {
+		if (arr_guesses[i] != 0) {
+			cout << arr_guesses[i] << " ";
+
+		}
+	}
+
+
+}
+
 void play_game() {
 	int rand_num = rand_number();
 	int guess; 
 	int num_guesses = 0; 
-	const int limit_guesses = 10;
+	const int limit_guesses = 1;
 	int arr_guesses[limit_guesses] = {};
 	int arr_guesses_size = sizeof(arr_guesses) / sizeof(arr_guesses[0]);
 	   
@@ -61,10 +75,10 @@ cout << R"(
 		}
 		else {
 			if (guess > rand_num) {
-				cout << "is too High \n\n";
+				cout << "Too high \n\n";
 			}
 			else if (guess < rand_num) {
-				cout << "is too Low \n\n";
+				cout << "Too low \n\n";
 			}
 			num_guesses++; 
 		}
@@ -72,17 +86,27 @@ cout << R"(
 	
 
 	//Show Guesses maked
-	cout << "### ";
-	for (int i = 0; i < arr_guesses_size; i++) {
-		if ( arr_guesses[i] != 0) {
-			cout << arr_guesses[i] << " ";
+	show_guesses(arr_guesses, arr_guesses_size); 
 
-		}
-	}
+
 	cout << "### \n";
+
 	// You Lose message
 	if (num_guesses >= limit_guesses) {
-		cout << "YOU LOSE!!! :) ";
+		string you_lose =  R"(
+|||||||||||||||||||||||||||||||||||||||||||||||||||||
+-----------------------------------------------------
+--------------------YOU LOSE !!!---------------------
+-----------------------------------------------------
+              The right number was answer       
+-----------------------------------------------------
+|||||||||||||||||||||||||||||||||||||||||||||||||||||
+			)";
+
+
+		you_lose.replace(you_lose.find("answer") , 6, std::to_string(guess));
+		cout << you_lose; 
+
 		// Show the right number
 		cout << "\n" <<"The right number was: " << rand_num;
 		return;

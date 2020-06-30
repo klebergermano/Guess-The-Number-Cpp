@@ -1,4 +1,4 @@
 ﻿  Main.cpp
-C:\Users\Kleberus\source\repos\Guess the Number Game\Main.cpp(10,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\Kleberus\source\repos\Guess the Number Game\Main.cpp(99): warning C4715: 'menu': not all control paths return a value
+C:\Users\Kleberus\source\repos\Guess the Number Game\Main.cpp(12,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Kleberus\source\repos\Guess the Number Game\Main.cpp(124): warning C4715: 'menu': not all control paths return a value
   Guess the Number Game.vcxproj -> C:\Users\Kleberus\source\repos\Guess the Number Game\Debug\Guess the Number Game.exe
