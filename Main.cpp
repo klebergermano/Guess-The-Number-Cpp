@@ -25,12 +25,27 @@ int main() {
 
 	//Title of the Game
 	cout << title();
-	
-	// Info Game
-	cout << "#### Guess The Number Game #### \n\n";
-	cout << "In this game you have to guess the random number between 1 and 100 \n\n";
+
+
 	
 	//Play Game
-	playGame(); 
+	cout << "\n";
+	cout << " 0. Quit the Game \n \n ";
+	cout << "1. Play the Game \n \n ";
+
+	int option; 
+	cin >> option;
+	if (option == 0) {
+		return 0; 
+	}
+	else if (option == 1) {
+		// Info Game
+		cout << "#### Guess The Number Game #### \n\n";
+		cout << "In this game you have to guess the random number between 1 and 100 \n\n";
+		playGame();
+	}
+	else {
+		cout << "Invalid command!";
+	}
 	return 0; 
 }

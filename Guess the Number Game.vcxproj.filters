@@ -24,5 +24,8 @@
     <ClCompile Include="title.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="loseAscii.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
