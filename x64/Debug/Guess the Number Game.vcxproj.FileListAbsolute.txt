@@ -1,0 +1,2 @@
+C:\Users\Kleberus\source\repos\Guess the Number Game\x64\Debug\Guess the Number Game.exe
+C:\Users\Kleberus\source\repos\Guess the Number Game\x64\Debug\Guess the Number Game.pdb
