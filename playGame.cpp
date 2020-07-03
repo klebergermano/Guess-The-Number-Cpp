@@ -64,12 +64,18 @@ void playGame() {
 	std::vector<int> arr_guesses;
 
 	// Info Game
-	cout << "#### Guess The Number Game #### \n \n";
-	cout << "In this game you have to guess the random number between 1 and 100 \n \n";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
+
+	cout << "#### GAME GUESS THE NUMBER #### \n \n";
+	cout << "In this game you have to guess the random number between 1 and 100. \n";
 	cout << "You have " << limit_guesses << " chances \n \n";
 
 	while (num_guesses < limit_guesses) {
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+
+		cout << "Type your guess: ";
 		cin >> guess;
+		cout << "\n";
 		// Store the guesses maked 
 		arr_guesses.push_back(guess);
 
@@ -85,13 +91,15 @@ void playGame() {
 			break;
 		}
 		else {
-	
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 14);
+
 			if (guess > rand_num) {
 				cout << "Too high \n \n";
 			}
 			else if (guess < rand_num) {
 				cout << "Too low \n \n";
 			}
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 			num_guesses++;
 		}
 	}
@@ -103,9 +111,9 @@ void playGame() {
 	// You Lose message
 	if (num_guesses >= limit_guesses) {
 		cout << loseAscii(rand_num);
+		cout << "\n \n";
 
-		// Show the right number
-		cout << "\n" << "The right number was: " << rand_num << "\n \n";
+	
 		playAgain();
 	}
 }

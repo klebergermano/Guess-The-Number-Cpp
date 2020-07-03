@@ -34,6 +34,10 @@ int main() {
 	}
 
 	else if (option == "s" || option == "S") {
+
+		system("CLS"); 
+		cout << title();
+
 		playGame();
 	}
 	else {
