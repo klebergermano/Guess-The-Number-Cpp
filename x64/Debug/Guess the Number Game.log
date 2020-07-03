@@ -1,3 +1,8 @@
-﻿  playGame.cpp
-C:\Users\Kleberus\source\repos\Guess the Number Game\playGame.cpp(32,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+﻿  loseAscii.cpp
+C:\Users\Kleberus\source\repos\Guess the Number Game\loseAscii.cpp(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Kleberus\source\repos\Guess the Number Game\loseAscii.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\Kleberus\source\repos\Guess the Number Game\loseAscii.cpp(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  playGame.cpp
+C:\Users\Kleberus\source\repos\Guess the Number Game\playGame.cpp(42,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
   Guess the Number Game.vcxproj -> C:\Users\Kleberus\source\repos\Guess the Number Game\x64\Debug\Guess the Number Game.exe

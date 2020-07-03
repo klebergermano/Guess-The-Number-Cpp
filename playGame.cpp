@@ -1,7 +1,10 @@
 #include <iostream>
 #include <string>
-#include <time.h>
 #include <vector>
+#include <time.h>
+#include <stdlib.h>
+#include <conio.h>
+#include<windows.h>
 
 using std::cout;
 using std::cin;
@@ -10,8 +13,12 @@ using std::string;
 void playGame(); 
 string winAscii();
 string loseAscii(int rand_num);
+string title();
 
 void playAgain() {
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+
 	string play_again = "n";
 
 	cout << "You Wanna play again? \n \n";
@@ -20,6 +27,9 @@ void playAgain() {
 	cin >> play_again;
 
 	if (play_again == "y" || play_again == "Y") {
+		system("CLS"); 
+		//Title of the Game
+		cout << title();
 		playGame();
 	}
 	else {
@@ -43,8 +53,9 @@ void show_guesses(std::vector<int> arr_guesses) {
 	}
 }
 
-void playGame() {
 
+void playGame() {
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 	int rand_num = rand_number();
 	cout << "The right number is: " << rand_num << "\n";
 	int guess;

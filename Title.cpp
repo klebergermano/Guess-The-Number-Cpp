@@ -1,6 +1,11 @@
 #include <iostream>
+#include<windows.h>
+
 using std::string; 
 string title() {
+	HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE); 
+	SetConsoleTextAttribute(h, FOREGROUND_BLUE );
+
 	string title = R"(
 #-----------------------------------------------------------------------------------------------|
 #     _____                       _______ _            _   _                 _                  |

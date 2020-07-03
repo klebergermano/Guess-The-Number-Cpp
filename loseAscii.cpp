@@ -1,7 +1,9 @@
 #include <iostream>;
 #include <string>; 
-
+#include <windows.h>;
 std::string loseAscii(int rand_num) {
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
+
 	std::string you_lose = R"(
 -------------------------------------------------------------------------------------------------|
 ---------------------------------- YOU LOSE!!! --------------------------------------------------|
