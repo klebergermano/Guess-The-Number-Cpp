@@ -57,7 +57,7 @@ void show_guesses(std::vector<int> arr_guesses) {
 void playGame() {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 	int rand_num = rand_number();
-	cout << "The right number is: " << rand_num << "\n";
+	cout << "The right number is: " << rand_num << "\n \n \n ";
 	int guess;
 	int num_guesses = 0;
 	const int limit_guesses = 5;
