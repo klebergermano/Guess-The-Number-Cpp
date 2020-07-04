@@ -4,7 +4,8 @@
 #include <time.h>
 #include <stdlib.h>
 #include <conio.h>
-#include<windows.h>
+#include <limits>
+#include <windows.h>
 
 using std::cout;
 using std::cin;
@@ -74,33 +75,42 @@ void playGame() {
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 
 		cout << "Type your guess: ";
-		cin >> guess;
-		cout << "\n";
-		// Store the guesses maked 
-		arr_guesses.push_back(guess);
+		cin >> guess; 
 
-		//Win message
-		if (guess == rand_num) {
-			
-			//win message
-			cout << winAscii(); 
-			cout << "\n \n";
-			
-			//playAgain
-			playAgain();
-			break;
+		if (cin.fail()) {
+			cin.clear();
+			cin.ignore(255, '\n');
+			cout << " You have entered a wrong input. \n Only numbers are acceptable." << endl;
 		}
 		else {
-			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 14);
+		
+			cout << "\n";
+			// Store the guesses maked 
+			arr_guesses.push_back(guess);
 
-			if (guess > rand_num) {
-				cout << "Too high \n \n";
+			//Win message
+			if (guess == rand_num) {
+
+				//win message
+				cout << winAscii();
+				cout << "\n \n";
+				 
+				//playAgain
+				playAgain();
+				break;
 			}
-			else if (guess < rand_num) {
-				cout << "Too low \n \n";
+			else {
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 14);
+
+				if (guess > rand_num) {
+					cout << "Too high \n \n";
+				}
+				else if (guess < rand_num) {
+					cout << "Too low \n \n";
+				}
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+				num_guesses++;
 			}
-			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
-			num_guesses++;
 		}
 	}
 
@@ -112,8 +122,6 @@ void playGame() {
 	if (num_guesses >= limit_guesses) {
 		cout << loseAscii(rand_num);
 		cout << "\n \n";
-
-	
 		playAgain();
 	}
 }

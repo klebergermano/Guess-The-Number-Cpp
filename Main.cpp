@@ -29,19 +29,30 @@ int main() {
 	string option; 
 	cin >> option;
 
-	if (option == "q" || option == "Q") {
-		return 0; 
-	}
-
-	else if (option == "s" || option == "S") {
-
-		system("CLS"); 
-		cout << title();
-
-		playGame();
+	if (cin.fail()) {
+		cin.clear();
+		cin.ignore(255, '\n');
+		cout << "You have entered a inexistent option,\nplease choose [s] to Start or [q] to Quit the game" << endl;
 	}
 	else {
-		cout << "Invalid command!";
+	
+		if (option == "q" || option == "Q") {
+			return 0;
+		}
+
+		else if (option == "s" || option == "S") {
+
+			system("CLS");
+			cout << title();
+
+			playGame();
+		}
+		else {
+		cout << "You have entered a inexistent option,  \n please choose [s] to Start or [q] to Quit the game" << endl;
+			
+		}
+	
 	}
+
 	return 0; 
 }
