@@ -61,7 +61,7 @@ void playGame() {
 	cout << "The right number is: " << rand_num << "\n \n \n ";
 	int guess;
 	int num_guesses = 0;
-	const int limit_guesses = 5;
+	const int limit_guesses = 10;
 	std::vector<int> arr_guesses;
 
 	// Info Game
