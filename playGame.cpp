@@ -19,7 +19,6 @@ string title();
 void playAgain() {
 
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
-
 	string play_again = "n";
 
 	cout << "You Wanna play again? \n \n";
@@ -53,7 +52,6 @@ void show_guesses(std::vector<int> arr_guesses) {
 		}
 	}
 }
-
 
 void playGame() {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
