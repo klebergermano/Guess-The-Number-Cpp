@@ -1,4 +1,6 @@
 ﻿  main.cpp
+  playGame.cpp
+C:\Users\Kleberus\source\repos\Guess the Number Game\playGame.cpp(43,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   title.cpp
   Generating Code...
   Guess the Number Game.vcxproj -> C:\Users\Kleberus\source\repos\Guess the Number Game\x64\Debug\Guess the Number Game.exe
