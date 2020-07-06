@@ -1,4 +1,0 @@
-﻿  playGame.cpp
-C:\Users\Kleberus\source\repos\Guess the Number Game\playGame.cpp(15,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\Kleberus\source\repos\Guess the Number Game\playGame.cpp(22,20): warning C4018: '<': signed/unsigned mismatch
-  Guess the Number Game.vcxproj -> C:\Users\Kleberus\source\repos\Guess the Number Game\Debug\Guess the Number Game.exe

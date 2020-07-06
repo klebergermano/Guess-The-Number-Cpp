@@ -51,8 +51,8 @@ int main() {
 		cout << "You have entered a inexistent option,  \n please choose [s] to Start or [q] to Quit the game" << endl;
 			
 		}
+		
 	
 	}
-
 	return 0; 
 }
