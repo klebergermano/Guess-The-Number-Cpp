@@ -11,6 +11,7 @@
 Guess The Number is a simple game that runs in Windows terminal, it was made for fun and to practice C++.
 In this game the player have 10 chances to guess the randon number between 1 and 100. 
 
+![](images/GuessTheNumberIMG.jpg)
 
 ## How to play
 Just open the "Guess The Number.exe" file in the Bin folder.
